@@ -1,15 +1,10 @@
-@import 'hidden-text.css';
-
 :root {
-    --bg: #F3F3F3;
-    --grey: #EBEBEB;
-    --blue: #019ADE;
-    --default: #485155;
-    --dark-grey: #485155;
-    --yellow: #FEBF36;
-    --white: #fff;
-    --font-default: 'FuturaPT Book', sans-serif;
-    --font-headings: 'Montserrat', sans-serif;
+    --bg: #000;
+    --default: #fff;
+    --black: #000;
+    --grey: #222222;
+    --font-default: 'Involve', sans-serif;
+    --font-headings: 'IntroDemo-BlackCAPS', sans-serif;
 }
 
 html {
@@ -36,22 +31,14 @@ html {
 
 @media (min-width:320px) {
     .page {
-        font-size: calc(100vw / 320 * 10);
+        font-size: calc(100vw / 402 * 10);
         overflow-x: hidden;
     }
 }
-
-@media (min-width:500px) {
-    .page {
-        overflow-x: visible;
-        font-size: calc(100vw / 640 * 10);
-    }
-}
-
 @media (min-width:960px) {
     .page {
         overflow-x: visible;
-        font-size: calc(100vw / 1400 * 10);
+        font-size: calc(100vw / 1728 * 10);
     }
 }
 
@@ -59,7 +46,7 @@ html {
     margin: 0;
     min-width: 32rem;
     min-height: 100%;
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     background-color: var(--bg);
     color: var(--default);
     line-height: normal;
@@ -72,15 +59,10 @@ html {
 
 @media (max-width: 960px) {
     .page__body {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 500px) {
-    .page__body {
-        font-size: 1.4rem;
-    }
-}
 
 main {
     position: relative;
@@ -229,7 +211,7 @@ textarea {
 }
 
 .container {
-    width: 116rem;
+    width: 152.8rem;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -237,104 +219,42 @@ textarea {
 
 @media (max-width:960px) {
     .container {
-        width: 62rem;
-    }
-}
-
-@media (max-width:500px) {
-    .container {
-        width: 30rem;
+        width: 34.1rem;
     }
 }
 
 .main-btn {
-    font-family: 'FuturaPT';
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-family: var(--font-default);
+    font-size: 1.9rem;
+    font-weight: 400;
     line-height: 1;
-    color: var(--white);
-    background-color: var(--dark-grey);
-    border: .1rem solid var(--dark-grey);
+    color: var(--black);
+    background-color: var(--default);
+    border: .1rem solid var(--default);
     text-align: center;
     transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    border-radius: .8rem;
+    border-radius: .4rem;
     position: relative;
-    padding: 1.4rem 2rem;
+    padding: 1.2rem 4.4rem;
 
-}
-
-@media (hover:hover) {
-    .main-btn:hover {
-        background-color: var(--blue);
-        border-color: var(--blue);
-    }
-}
-
-@media (hover:none) {
-    .main-btn:active {
-        background-color: var(--blue);
-        border-color: var(--blue);
-    }
 }
 
 
 .title {
-    font-family: var(--font-headings);
-    font-weight: 500;
-    font-size: 3.2rem;
-    line-height: 1.2;
-    color: var(--dark-grey);
-    text-wrap: balance;
-}
-
-h2.title {
-    font-size: 2.6rem;
-
-}
-
-h3.title {
     font-family: var(--font-default);
-    font-size: 2.4rem;
-
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 1.2;
+    color: var(--default);
 }
 
-h4.title {
-    font-family: 'FuturaPT Demi';
-    font-size: 1.6rem;
-}
-
-.title strong {
-    font-weight: 500;
-    color: var(--blue);
-}
-
-@media (max-width: 960px) {
-    .title {
-        font-size: 2.8rem;
-    }
-}
-@media (max-width: 500px) {
-    .title {
-        font-size: 2.4rem;
-    }
-    h2.title {
-        font-size: 2rem;
-    
-    }
-    
-    h3.title {
-        font-size: 1.8rem;
-    
-    }
-    
-}
 
 /* Forms  */
-.cta__form__inner {
+/* .cta__form__inner {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -468,144 +388,27 @@ h4.title {
     background-color: #fff;
 }
 
-/* стили при наведении курсора на checkbox */
 .custom-checkbox>input:not(:disabled):not(:checked)+p:hover::before {
     border-color: var(--blue);
 }
 
-/* стили для чекбокса, находящегося в фокусе */
 .custom-checkbox>input:focus+p::before {
     border-color: var(--blue);
 }
 
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .custom-checkbox>input:focus:not(:checked)+p::before {
     border-color: var(--blue);
 }
 
-/* стили для чекбокса, находящегося в состоянии checked */
 .custom-checkbox>input:checked+p::before {
 
     background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6741 5.89355L8.01619 15.7883L4.30566 12.0778' stroke='black' stroke-width='1.94595' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-/* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox>input:disabled+p::before {
     background-color: #e9ecef;
-}
-
-.licence__swiper {
-    overflow: visible;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    width: 4rem;
-    height: 4rem;
-    background-color: var(--white);
-    border-radius: 50%;
-    color: var(--default);
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    content: '';
-    width: 1.8rem;
-    height: 1.8rem;
-    background-image: url(../../img/base/swiper-arrow.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: brightness(0);
-    opacity: 0.5;
-    transition: all 0.2s linear;
-}
-
-@media (hover:hover) {
-
-    .swiper-button-next:hover::after,
-    .swiper-button-prev:hover::after {
-        opacity: 1;
-        filter: brightness(1);
-
-    }
-}
-
-.swiper-button-next::after {
-    transform: rotate(180deg);
-}
-
-.swiper-button-next {
-    right: -2rem;
-}
-
-.swiper-button-prev {
-    left: -2rem;
-}
-
-@media (max-width: 960px) {
-    .swiper-button-next {
-        right: 1rem;
-    }
-
-    .swiper-button-prev {
-        left: 1rem;
-    }
-}
-
-.swiper-slide {
-    transition: opacity 0.2s linear;
-}
-
-.swiper-slide:not(.swiper-slide-visible) {
-    opacity: 0.25;
-}
-
-/* Breadcrumbs */
-.breadcrumbs {
-    display: flex;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-}
-
-a.breadcrumbs__item {
-    font-size: 1.4rem;
-    color: rgba(72, 81, 85, 0.25);
-    transition: color .3s ease-in-out;
-    margin-right: 2.5rem;
-}
-
-a.breadcrumbs__item::after {
-    content: '/';
-    margin-left: 2.5rem;
-    color: rgba(72, 81, 85, 0.25);
-
-}
-
-.breadcrumbs__item {
-    font-size: 1.4rem;
-
-}
-
-@media (hover:hover) {
-    a.breadcrumbs__item:hover {
-        color: var(--blue);
-    }
-}
-
-@media (max-width: 500px) {
-    .breadcrumbs {
-        margin-top: 2rem;
-    }
-    .breadcrumbs__item, a.breadcrumbs__item {
-        font-size: 1.2rem;
-        margin-right: 1rem;
-    }
-    a.breadcrumbs__item::after {
-        margin-left: 1rem;
-    }
-}
-
+} */
+/* 
 
 .modal {
     position: fixed;
@@ -746,48 +549,4 @@ a.breadcrumbs__item::after {
     .modal__tarif__item__content {
         font-size: 1.2rem;
     }
-}
-
-.page__header .title {
-    margin-top: 2rem;
-}
-
-.page__header .description {
-    margin-top: 2rem;
-}
-
-.page__header .description p {
-    font-size: 2rem;
-    line-height: 1.6;
-}
-
-@media (max-width: 960px) {
-    .page__header .description p,
-    .page__header .description {
-        font-size: 1.6rem;
-    }
-}
-
-.modal__inner:has(.modal__callback) {
-    max-width: 44rem;
-}
-
-
-.modal__callback .title {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.modal__callback .description {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-@media (max-width: 500px) {
-    .modal__inner:has(.modal__callback) {
-        max-width: 30rem;
-    }
-   
-    .modal__callback .description {
-        font-size: 1.6rem;
-    }
-}
+} */
