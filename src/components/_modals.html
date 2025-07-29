@@ -1,0 +1,33 @@
+    <div class="modal" id="callback">
+        <div class="modal__inner">
+            <button class="modal__close btn-reset" type="button" data-modal-close>
+                <svg>
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__content main-screen__right">
+                <div class="modal-form ">
+
+                    <h3 class="form__subtitle">Оформление заказа</h3>
+                    <div class="form__text">Оставьте заявку и наши менеджеры перезвонят Вам в&nbsp;ближайшее время</div>
+                    <form class="form__box">
+                        <label for="user-name" class="form__label">Как Вас зовут?*</label>
+                        <input type="text" class="input-reset form__input" name="user-name" id="user-name"
+                            placeholder="Иванов Иван" required>
+                        <label for="user-name" class="form__label">Ваш номер телефона*</label>
+                        <input type="tel" class="input-reset form__input" name="user-name"
+                            placeholder="+7 (999) 999-99-99" id="user-phone" required>
+                        <div class="form__submit">
+                            <label class="acceptance custom-checkbox">
+                                <input type="checkbox" name="acceptance">
+                                <span class="acceptance__text">Я соглашаюсь на обработку персональных данных</span>
+                            </label>
+                            <button type="submit" class="main-btn btn-reset form__btn">Оформить заказ</button>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>

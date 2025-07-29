@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Involve';
+    src: url('involve-regular.eot');
+    src: url('involve-regular.eot?#iefix') format('embedded-opentype'),
+        url('involve-regular.woff2') format('woff2'),
+        url('involve-regular.woff') format('woff'),
+        url('involve-regular.ttf') format('truetype'),
+        url('involve-regular.svg#involve-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IntroDemo-BlackCAPS';
+    src: url('introdemo-blackcaps.eot');
+    src: url('introdemo-blackcaps.eot?#iefix') format('embedded-opentype'),
+        url('introdemo-blackcaps.woff2') format('woff2'),
+        url('introdemo-blackcaps.woff') format('woff'),
+        url('introdemo-blackcaps.ttf') format('truetype'),
+        url('introdemo-blackcaps.svg#introdemo-blackcaps') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('involve-bold.eot');
+    src: url('involve-bold.eot?#iefix') format('embedded-opentype'),
+        url('involve-bold.woff2') format('woff2'),
+        url('involve-bold.woff') format('woff'),
+        url('involve-bold.ttf') format('truetype'),
+        url('involve-bold.svg#involve-bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('involve-semibold.eot');
+    src: url('involve-semibold.eot?#iefix') format('embedded-opentype'),
+        url('involve-semibold.woff2') format('woff2'),
+        url('involve-semibold.woff') format('woff'),
+        url('involve-semibold.ttf') format('truetype'),
+        url('involve-semibold.svg#involve-semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
