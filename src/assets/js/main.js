@@ -58,28 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    // const burgerBtn = document.querySelector('#burger');
-    // const burgerMenu = document.querySelector('.header__menu');
+    const burgerBtn = document.querySelector('#burger');
+    const burgerBtnClose = document.querySelector('#burger-close');
+    const burgerMenu = document.querySelector('.burger__menu');
 
-    // burgerBtn.addEventListener('click', function () {
-    //     burgerMenu.classList.toggle('active');
-    //     burgerBtn.classList.toggle('active');
-    //     console.log(burgerBtn, burgerMenu);
-    // })
-
-    // if (window.matchMedia('(max-width: 640px)')) {
-    //     const headerMenu = document.querySelector('.header__menu');
-    //     headerMenu.addEventListener('click', (e) => {
-    //         const targetElement = e.target;
-    //         if (targetElement.classList.contains('header__link') && targetElement.parentNode.querySelector('.header__submenu')) {
-    //             e.preventDefault();
-    //             targetElement.parentNode.classList.toggle('active');
-    //             console.log(targetElement);
-
-    //         }
-
-    //     })
-    // }
+    burgerBtn.addEventListener('click', function () {
+        burgerMenu.classList.add('active');
+    })
+    burgerBtnClose.addEventListener('click', function () {
+        burgerMenu.classList.remove('active');
+    })
     
 
     // Fancybox.bind('[data-fancybox]', {});
