@@ -218,3 +218,80 @@
     font-weight: 600;
     font-family: var(--font-default);
 }
+
+@media(max-width: 960px) {
+    .stuntmans__tabs {
+        gap: 0;
+    }
+    
+    .stuntmans__tabs__btns {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .stuntmans__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem 2rem;
+    }
+    
+    .stuntman-card__img {
+        height: 24rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .stuntman-card__hover {
+        padding: 1rem;
+        gap: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Стили для кнопки фильтров на мобильных */
+.filters-btn {
+    display: none;
+    transition: opacity 0.2s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.filters-btn__icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+@media (hover: none) {
+    .filters-btn:active {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 960px) {
+    .filters-btn {
+        display: flex;
+    }
+    
+    .stuntmans__tabs__btns {
+        display: none;
+    }
+    .stuntman-card__name {
+        font-size: 1.5rem;
+    }
+}
+
+.burger__menu__filters .stuntmans__tabs__btns {
+    display: flex;
+}
+.burger__menu__content {
+    text-align: center;
+    text-wrap: balance;
+    font-size: 1.5rem;
+}
+.burger__menu__filters  {
+    padding-bottom: 5rem;
+}
+.burger__menu__filters .burger__menu__inner  {
+    justify-content: start;
+    gap: 5rem
+    ;
+}

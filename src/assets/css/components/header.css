@@ -45,7 +45,7 @@
     object-fit: contain;
 }
 
-.burger__menu {
+.burger__menu, .burger__menu__filters  {
     position: absolute;
     top: 0;
     left: 0;
@@ -62,7 +62,7 @@
 
 }
 
-.burger__menu.active {
+.burger__menu.active, .burger__menu__filters.active {
     opacity: 1;
     visibility: visible;
     z-index: 100;

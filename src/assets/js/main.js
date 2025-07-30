@@ -79,34 +79,28 @@ document.addEventListener('DOMContentLoaded', function () {
         enableScroll();
 
     })
+    const burgerBtnFilters = document.querySelector('#filters-btn');
+    const burgerBtnFiltersClose = document.querySelector('#burger-filters-close');
+    const burgerMenuFilters = document.querySelector('.burger__menu__filters');
+    if (burgerBtnFilters) {
+        burgerBtnFilters.addEventListener('click', function () {
+            burgerMenuFilters.classList.add('active');
+            disableScroll();
 
+        })
+        burgerBtnFiltersClose.addEventListener('click', function () {
+            burgerMenuFilters.classList.remove('active');
+            enableScroll();
+
+        })
+    }
+
+    // Инициализация табов (оставляем для обратной совместимости)
     const tabButtons = document.querySelectorAll('.stuntmans__tabs__btn');
     const tabContents = document.querySelectorAll('.stuntmans__tabs__content__item');
     if (tabButtons.length > 0) {
-        tabButtons.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                // Удаляем активный класс у всех кнопок
-                tabButtons.forEach(function (b) {
-                    b.classList.remove('active');
-                });
-                // Добавляем активный класс на выбранную кнопку
-                this.classList.add('active');
-
-                const tabId = this.getAttribute('data-tab');
-                // Скрываем все табы
-                tabContents.forEach(function (content) {
-                    content.classList.remove('active');
-                });
-                // Показываем выбранный таб
-                const activeContent = document.querySelector('.stuntmans__tabs__content__item[data-content="' + tabId + '"]');
-                if (activeContent) {
-                    activeContent.classList.add('active');
-                }
-            });
-        });
-
         // По умолчанию показываем первый таб
-        const firstContent = document.querySelector('.stuntmans__tabs__content__item[data-tab="1"]');
+        const firstContent = document.querySelector('.stuntmans__tabs__content__item[data-content="1"]');
         if (firstContent) {
             firstContent.classList.add('active');
         }
@@ -114,6 +108,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     Fancybox.bind('[data-fancybox]', {});
+
+    // Функциональность для синхронизации фильтров между модальным окном и основными табами
+    const modalTabButtons = document.querySelectorAll('#filters-modal .stuntmans__tabs__btn');
+    const mainTabButtons = document.querySelectorAll('.stuntmans__tabs__btn');
+    const mainTabContents = document.querySelectorAll('.stuntmans__tabs__content__item');
+
+    function syncTabs(clickedButton, isFromModal = false) {
+        const tabId = clickedButton.getAttribute('data-tab');
+
+        // Обновляем кнопки в основном интерфейсе
+        mainTabButtons.forEach(function (btn) {
+            btn.classList.remove('active');
+        });
+        const mainActiveButton = document.querySelector('.stuntmans__tabs__btn[data-tab="' + tabId + '"]');
+        if (mainActiveButton) {
+            mainActiveButton.classList.add('active');
+        }
+
+        // Обновляем кнопки в модальном окне
+        modalTabButtons.forEach(function (btn) {
+            btn.classList.remove('active');
+        });
+        const modalActiveButton = document.querySelector('#filters-modal .stuntmans__tabs__btn[data-tab="' + tabId + '"]');
+        if (modalActiveButton) {
+            modalActiveButton.classList.add('active');
+        }
+
+        // Обновляем контент
+        mainTabContents.forEach(function (content) {
+            content.classList.remove('active');
+        });
+        const activeContent = document.querySelector('.stuntmans__tabs__content__item[data-content="' + tabId + '"]');
+        if (activeContent) {
+            activeContent.classList.add('active');
+        }
+
+        // Если клик был из модального окна, закрываем его
+        if (isFromModal) {
+            const modal = document.getElementById('filters-modal');
+            if (modal) {
+                modal.classList.remove('modal--active');
+                document.body.style.overflowY = '';
+            }
+        }
+    }
+
+    // Обработчики для кнопок в модальном окне
+    modalTabButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            syncTabs(this, true);
+        });
+    });
+
+    // Обновляем обработчики для основных кнопок
+    mainTabButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            syncTabs(this, false);
+        });
+    });
+
 
 })
 

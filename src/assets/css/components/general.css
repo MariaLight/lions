@@ -73,6 +73,12 @@ main {
     padding-top: 23.2rem;
 }
 
+@media(max-width: 960px) {
+    .main {
+        padding: 10rem 0;
+    }
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;

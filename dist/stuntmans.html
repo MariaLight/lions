@@ -89,6 +89,11 @@
     <main class="main">
         <section class="stuntmans container">
             <div class="stuntmans__inner">
+                <!-- Кнопка фильтров для мобильных -->
+                <button class="filters-btn btn-reset" id="filters-btn">
+                    <img src="assets/img/svg/filters.svg" alt="Фильтры" class="filters-btn__icon">
+                </button>
+
                 <div class="stuntmans__tabs">
                     <div class="stuntmans__tabs__btns">
                         <button class="stuntmans__tabs__btn btn-reset active" data-tab="1">Каскадеры</button>
@@ -1036,6 +1041,33 @@
         </section>
     </main>
 
+</div>
+<div class="burger__menu__filters ">
+    <div class="burger__menu__inner container">
+        <div class="burger__menu__header">
+            <div class="header__logo">
+                <img src="assets/img/svg/logo.svg" alt="Львы Якова">
+            </div>
+            <button class="burger btn-reset" id="burger-filters-close" aria-label="Закрыть меню">
+                <img src="assets/img/svg/close.svg" alt="Закрыть">
+            </button>
+        </div>
+        <div class="burger__menu__content">
+            Выберите категорию,
+            в которой хотите найти каскадера
+        </div>
+        <div class="stuntmans__tabs__btns">
+            <button class="stuntmans__tabs__btn btn-reset active" data-tab="1">Каскадеры</button>
+            <button class="stuntmans__tabs__btn btn-reset" data-tab="2">Высокие трюки</button>
+            <button class="stuntmans__tabs__btn btn-reset" data-tab="3">Пиротехника</button>
+            <button class="stuntmans__tabs__btn btn-reset" data-tab="4">Авто-трюки</button>
+            <button class="stuntmans__tabs__btn btn-reset" data-tab="5">Мото-трюки</button>
+            <button class="stuntmans__tabs__btn btn-reset" data-tab="6">Файер-шоу</button>
+            <button class="stuntmans__tabs__btn btn-reset" data-tab="7">Паркур</button>
+            <button class="stuntmans__tabs__btn btn-reset" data-tab="8">CG-трюки</button>
+        </div>
+
+    </div>
 </div>
 <!-- import "_footer.html" -->
 
