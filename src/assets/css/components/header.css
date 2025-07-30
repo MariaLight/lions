@@ -46,7 +46,7 @@
 }
 
 .burger__menu, .burger__menu__filters  {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;

@@ -168,6 +168,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Обработчики для кнопок фильтров в модальном окне
+    const modalFilterButtons = document.querySelectorAll('.burger__menu__filters .stuntmans__tabs__btn');
+
+    modalFilterButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            // Синхронизируем табы
+            syncTabs(this, false);
+            
+            // Закрываем модальное окно фильтров
+            if (burgerMenuFilters) {
+                burgerMenuFilters.classList.remove('active');
+                enableScroll();
+            }
+        });
+    });
+
+    // Функциональность для карточек каскадеров - двойной клик
+    const stuntmanCards = document.querySelectorAll('.stuntman-card__link');
+    let clickedCards = new Map(); // Храним состояние карточек
+
 
 })
 
