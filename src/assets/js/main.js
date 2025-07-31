@@ -184,10 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Функциональность для карточек каскадеров - двойной клик
-    const stuntmanCards = document.querySelectorAll('.stuntman-card__link');
-    let clickedCards = new Map(); // Храним состояние карточек
-
 
 })
 
