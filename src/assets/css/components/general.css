@@ -260,6 +260,12 @@ textarea {
     color: var(--default);
 }
 
+@media (max-width: 960px) {
+    .title {
+        font-size: 4.2rem;
+    }
+}
+
 /* Forms  */
 /* .cta__form__inner {
     display: flex;
