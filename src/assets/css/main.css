@@ -4,6 +4,7 @@
 @import url("components/footer.css");
 @import url("pages/stuntmans.css");
 @import url("pages/single.css");
+@import url("pages/about.css");
 
 .banner {
     background-image: url("../img/base/banner.png");
