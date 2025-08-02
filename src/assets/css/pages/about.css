@@ -65,7 +65,7 @@
 /* Services  */
 .services {
     padding-top: 5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 0;
     scroll-margin-top: 14.7rem;
 }
 
@@ -109,7 +109,7 @@
 @media (max-width: 640px) {
     .services {
         padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-bottom: 0;
         scroll-margin-top: 10rem;
     }
 
