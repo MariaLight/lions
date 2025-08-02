@@ -96,7 +96,7 @@
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .banner {
         background-image: url("../img/base/banner-mobile.png");
     }

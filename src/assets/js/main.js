@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Инициализация WOW.js
+    if (typeof WOW !== 'undefined') {
+        new WOW().init();
+    }
+
+    // Автоматическая прокрутка на странице about
+    if (window.location.pathname.includes('about.html') || window.location.pathname.endsWith('/about')) {
+        setTimeout(function() {
+            const aboutSection = document.getElementById('about-section');
+            if (aboutSection) {
+                // Получаем высоту header для компенсации
+                const header = document.querySelector('.header');
+                const headerHeight = header ? header.offsetHeight : 0;
+                
+                // Прокручиваем с учетом высоты header
+                const elementPosition = aboutSection.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 1500); // 1.5 секунды (0.5s задержка анимации + 1s после появления)
+    }
+
     const btns = document.querySelectorAll('[data-modal]');
     const body = document.querySelector('body');
     const btnClose = document.querySelectorAll('[data-modal-close]');

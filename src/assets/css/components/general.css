@@ -58,7 +58,7 @@ html {
     flex-direction: column;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .page__body {
         font-size: 1.5rem;
     }
@@ -73,7 +73,7 @@ main {
     padding-top: 23.2rem;
 }
 
-@media(max-width: 960px) {
+@media(max-width: 640px) {
     .main {
         padding: 10rem 0;
     }
@@ -102,7 +102,7 @@ main {
     padding: 5rem 0;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .section {
         padding: 4rem 0;
     }
@@ -264,7 +264,7 @@ textarea {
     color: var(--default);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .title {
         font-size: 4.2rem;
     }
@@ -278,7 +278,7 @@ textarea {
     margin-bottom: 1rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .cta__form__inner {
         flex-wrap: wrap;
         gap: 1rem;
@@ -504,7 +504,7 @@ textarea {
     height: 2.4rem
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .modal__inner {
         max-width: 30rem;
     }
@@ -552,7 +552,7 @@ textarea {
     height: 2rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .modal__tarif__title {
         font-size: 2rem !important;
         margin-bottom: 2rem;
