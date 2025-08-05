@@ -6,6 +6,7 @@
 @import url("pages/single.css");
 @import url("pages/about.css");
 @import url("pages/join.css");
+@import url("pages/portfolio.css");
 
 .banner {
     background-image: url("../img/base/banner.png");

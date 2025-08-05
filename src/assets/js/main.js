@@ -208,6 +208,43 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    const filmsSwiper = new Swiper('.films-swiper', {
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        spaceBetween: -100,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        direction: 'horizontal',
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1.5,
+            slideShadows: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.2,
+                spaceBetween: -50,
+            },
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: -80,
+            },
+            1024: {
+                slidesPerView: 3.5,
+                spaceBetween: -100,
+            },
+            1440: {
+                slidesPerView: 4.5,
+                spaceBetween: -120,
+            }
+        }
+    });
 
 })
 
