@@ -118,6 +118,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         })
     }
+    const portfolioBtn = document.querySelector('#portfolio-btn');
+    const portfolioBtnClose = document.querySelector('#burger-portfolio-close');
+    const portfolioModal = document.querySelector('.portfolio-modal');
+    if (portfolioBtn) {
+        portfolioBtn.addEventListener('click', function () {
+            portfolioModal.classList.add('active');
+            disableScroll();
+
+        })
+        portfolioBtnClose.addEventListener('click', function () {
+            portfolioModal.classList.remove('active');
+            enableScroll();
+
+        })
+    }
 
     // Инициализация табов (оставляем для обратной совместимости)
     const tabButtons = document.querySelectorAll('.stuntmans__tabs__btn');
