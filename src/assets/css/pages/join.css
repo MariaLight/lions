@@ -34,3 +34,27 @@
 .join__btn {
     margin: 10rem auto 0 auto;
 }
+
+@media (max-width: 640px) {
+    .join {
+        padding: 5rem 0 0;
+    }
+    
+    .join__inner {
+        grid-template-columns: 1fr ;
+        gap: 4rem;
+    }
+    
+    .join__content {
+        justify-content: start;
+        gap: 4rem;
+    }
+    
+    .join__img {
+        height: 20.4rem;
+    }
+    
+    .join__btn {
+        margin: 5rem auto 0 auto;
+    }
+}
