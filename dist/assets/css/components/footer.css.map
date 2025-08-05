@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"footer.css","sourcesContent":[]}
+{"version":3,"sources":["components/footer.css"],"names":[],"mappings":"AAAA,yBACI,wCACI,QAAA","file":"footer.css","sourcesContent":["@media (max-width: 640px) {\r\n    .footer .burger__menu__footer__contacts {\r\n        display: none;\r\n    }\r\n}"]}

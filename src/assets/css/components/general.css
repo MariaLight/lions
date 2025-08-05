@@ -36,6 +36,7 @@ html {
         overflow-x: hidden;
     }
 }
+
 @media (min-width:960px) {
     .page {
         overflow-x: visible;
@@ -256,6 +257,19 @@ textarea {
 
 }
 
+@media (hover: hover) {
+    .main-btn:hover {
+        background-color: transparent;
+        color: var(--default);
+    }
+}
+
+@media (hover: none) {
+    .main-btn:active {
+        background-color: transparent;
+        color: var(--default);
+    }
+}
 
 .title {
     font-family: var(--font-default);
@@ -272,106 +286,44 @@ textarea {
 }
 
 /* Forms  */
-/* .cta__form__inner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
 
-@media (max-width: 640px) {
-    .cta__form__inner {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-}
-@media (max-width: 500px) {
-    .cta__form__inner {
-        align-items: stretch;
-        flex-direction: column;
-    }
-}
 
-.form__item {
-    position: relative;
-}
-
-.form__item::before {
-    position: absolute;
-    content: '';
-    width: 1.8rem;
-    height: 1.8rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 1.4rem;
-    left: 1rem;
-}
-
-.form__item_name::before {
-    background-image: url(../../img/base/form-name.svg);
-}
-
-.form__item_tel::before {
-    background-image: url(../../img/base/form-tel.svg);
-}
-
-.form__item_text::before {
-    background-image: url(../../img/base/form-message.svg);
-}
-.form__item_email::before {
-    background-image: url(../../img/base/form-email.svg);
-}
 
 .form__input {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: var(--default);
-    background: var(--white);
-    padding: 1.4rem 1.4rem 1.4rem 3.8rem;
+    font-size: 2.8rem;
+    color: var(--white);
+    background: transparent;
+    padding: 3.5rem 0;
     width: 100%;
     outline: none;
     margin-bottom: 0;
-    border-radius: .8rem;
-    font-weight: 500;
-    font-family: 'FuturaPT';
+    font-weight: 400;
+    font-family: var(--font-default);
+    border-bottom: 1px solid var(--white);
 }
 
 .form__input::placeholder {
-    font-family: 'FuturaPT Book';
+    font-family: var(--font-default);
+    opacity: 0.7;
 
 }
 
-@media (max-width: 500px) {
-    .cta__form-btn, .form__item, .form__input {
-        width: 100%;
+.form__submit {
+    margin: 10rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+@media (max-width: 640px) {
+    .form__input {
+        font-size: 1.5rem;
+        padding: 2rem 0;
     }
-}
 
-.cta__form-btn {
-    min-width: 18rem;
-}
 
-.acceptance__text {
-    font-size: 1.2rem;
-    color: rgba(72, 81, 85, 0.5);
-}
-
-.acceptance__text a {
-    color: var(--blue);
-    text-decoration: underline;
-}
-
-@media (hover:hover) {
-    .acceptance__text a:hover {
-        color: var(--default);
-    }
-}
-
-@media (hover:none) {
-    .acceptance__text a:active {
-        color: var(--default);
-    }
 }
 
 .custom-checkbox>input {
@@ -380,7 +332,7 @@ textarea {
     opacity: 0;
 }
 
-.custom-checkbox>p {
+.custom-checkbox>span {
     display: inline-flex;
     align-items: center;
     user-select: none;
@@ -388,7 +340,7 @@ textarea {
 
 }
 
-.custom-checkbox>p::before {
+.custom-checkbox>span::before {
     content: '';
     display: inline-block;
     width: 1.6rem;
@@ -406,26 +358,35 @@ textarea {
     background-color: #fff;
 }
 
-.custom-checkbox>input:not(:disabled):not(:checked)+p:hover::before {
-    border-color: var(--blue);
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: var(--default);
 }
 
-.custom-checkbox>input:focus+p::before {
-    border-color: var(--blue);
+.custom-checkbox>input:focus+span::before {
+    border-color: var(--default);
 }
 
-.custom-checkbox>input:focus:not(:checked)+p::before {
-    border-color: var(--blue);
+.custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: var(--default);
 }
 
-.custom-checkbox>input:checked+p::before {
+.custom-checkbox>input:checked+span::before {
 
     background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6741 5.89355L8.01619 15.7883L4.30566 12.0778' stroke='black' stroke-width='1.94595' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 .custom-checkbox>input:disabled+p::before {
     background-color: #e9ecef;
-} */
+}
+.acceptance__text {
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+.acceptance__text a {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
 /* 
 
 .modal {

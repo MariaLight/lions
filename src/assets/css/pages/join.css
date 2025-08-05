@@ -58,3 +58,13 @@
         margin: 5rem auto 0 auto;
     }
 }
+
+/* Form  */
+.join-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 73.3rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+}

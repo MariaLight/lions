@@ -1,0 +1,5 @@
+@media (max-width: 640px) {
+    .footer .burger__menu__footer__contacts {
+        display: none;
+    }
+}
