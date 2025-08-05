@@ -228,22 +228,18 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         breakpoints: {
             320: {
-                slidesPerView: 1.2,
+                slidesPerView: 1,
                 spaceBetween: -50,
             },
-            768: {
-                slidesPerView: 2.5,
-                spaceBetween: -80,
-            },
-            1024: {
-                slidesPerView: 3.5,
-                spaceBetween: -100,
-            },
-            1440: {
+            640: {
                 slidesPerView: 4.5,
                 spaceBetween: -120,
             }
-        }
+        },
+        pagination: {
+            el: '.films-swiper__pagination',
+            clickable: true,
+        },
     });
 
     // Инициализация portfolio-swiper
