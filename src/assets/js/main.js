@@ -246,5 +246,39 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Инициализация portfolio-swiper
+    const portfolioSwiper = new Swiper('.portfolio-swiper', {
+        slidesPerView: 4.5,
+        centeredSlides: false,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.portfolio-swiper__button-next',
+            prevEl: '.portfolio-swiper__button-prev',
+        },
+        // breakpoints: {
+        //     320: {
+        //         slidesPerView: 1.5,
+        //         spaceBetween: 20,
+        //     },
+        //     768: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 25,
+        //     },
+        //     1024: {
+        //         slidesPerView: 4,
+        //         spaceBetween: 30,
+        //     },
+        //     1440: {
+        //         slidesPerView: 5,
+        //         spaceBetween: 30,
+        //     }
+        // }
+    });
+
 })
 

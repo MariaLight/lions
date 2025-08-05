@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding-top: 7rem;
 }
+
 .portfolio-nav__nav {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@
     align-items: end;
     margin-bottom: 9.2rem;
 }
+
 .portfolio-nav__link {
     font-size: 9.5rem;
     font-family: var(--font-headings);
@@ -126,17 +128,166 @@
     transform: scale(1.2);
 }
 
+/* Portfolio Swiper Styles */
+.portfolio-swiper-section {
+    padding: 8rem 0;
+    background: #000;
+    position: relative;
+}
+
+.portfolio-swiper {
+    overflow: visible;
+    padding: 0 8rem;
+    position: relative;
+}
+
+.portfolio-swiper .swiper-wrapper {
+    align-items: center;
+}
+
+.portfolio-swiper .swiper-slide {
+    transition: all 0.5s ease;
+    transform-origin: center;
+    transform: scale(0.8);
+}
+
+.portfolio-swiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+
+.portfolio-swiper .swiper-slide-prev-prev,
+.portfolio-swiper .swiper-slide-next-next {
+    opacity: 0.6;
+    transform: scale(0.8);
+    z-index: 1;
+}
+
+.portfolio-swiper__item {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.portfolio-swiper__img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+}
+
+.portfolio-swiper__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.portfolio-swiper__title {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #fff;
+    padding: 0;
+    font-size: 2.2rem;
+    font-weight: 400;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+    text-align: center;
+    margin-top: 3.3rem;
+}
+
+/* Показываем название только на активном слайде */
+.portfolio-swiper .swiper-slide:not(.swiper-slide-active) .portfolio-swiper__title {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+/* Кнопки навигации для portfolio-swiper */
+.portfolio-swiper__button-next,
+.portfolio-swiper__button-prev {
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.portfolio-swiper__button-next::after,
+.portfolio-swiper__button-prev::after {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Адаптивность для portfolio-swiper */
+@media (max-width: 768px) {
+    .portfolio-swiper {
+        padding: 0 4rem;
+    }
+
+    .portfolio-swiper__item {
+        height: 35rem;
+    }
+
+    .portfolio-swiper__title {
+        font-size: 1.8rem;
+        padding: 2rem 1.5rem 1.5rem;
+    }
+
+    .portfolio-swiper__button-next,
+    .portfolio-swiper__button-prev {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .portfolio-swiper__button-next::after,
+    .portfolio-swiper__button-prev::after {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-swiper {
+        padding: 0 3rem;
+    }
+
+    .portfolio-swiper__item {
+        height: 28rem;
+    }
+
+    .portfolio-swiper__title {
+        font-size: 1.4rem;
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .portfolio-swiper__button-next,
+    .portfolio-swiper__button-prev {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .portfolio-swiper__button-next::after,
+    .portfolio-swiper__button-prev::after {
+        font-size: 1.2rem;
+    }
+}
 
 /* Portfolio  */
 .portfolio {
     padding: 10rem 0;
 }
+
 .portfolio__header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     margin-bottom: 5rem;
 }
+
 .portfolio__header__title {
     text-transform: uppercase;
 }
