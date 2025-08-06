@@ -8,6 +8,15 @@
 @import url("pages/join.css");
 @import url("pages/portfolio.css");
 
+/* Стили для wow.js анимаций */
+.wow {
+    visibility: hidden;
+}
+
+.wow.animate__animated {
+    visibility: visible;
+}
+
 .banner {
     background-image: url("../img/base/banner.png");
     background-size: cover;

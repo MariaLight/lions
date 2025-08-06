@@ -70,12 +70,15 @@ main {
     position: relative;
     z-index: 2;
     width: 100%;
+    
+}
+.main-paddings {
     padding-bottom: 20rem;
     padding-top: 15rem;
 }
 
 @media(max-width: 640px) {
-    .main {
+    .main-paddings {
         padding: 10rem 0;
     }
 }

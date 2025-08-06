@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Инициализация WOW.js
-    if (typeof WOW !== 'undefined') {
-        new WOW().init();
-    }
+    // Инициализация WOW.js с задержкой для гарантии загрузки всех ресурсов
+    setTimeout(function() {
+        if (typeof WOW !== 'undefined') {
+            new WOW({
+                boxClass: 'wow',
+                animateClass: 'animate__animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            }).init();
+        }
+    }, 100);
 
     // Автоматическая прокрутка на странице about
     if (window.location.pathname.includes('about.html') || window.location.pathname.endsWith('/about')) {
